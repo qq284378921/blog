@@ -1,50 +1,117 @@
 body{
     background: #fff;
-  }
+    margin: 0;
+    padding: 0;
+}
+*{margin:0;padding:0}
 a{
     text-decoration: none;
-  }
+}
 .clearfix::after{
     content: '';
     display: block;
     clear: both;
-  }
+}
+.topNavBar {
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    width: 100%;
+}
 .topNavBar .logo {
     font-family: "Hiragino Kaku Gothic Std";
     font-size: 22px;
     padding-top: 1px;
-  }
+}
 .topNavBar .logo .rs{
     color: #e6686a;
     margin-right: 4px;
-  }
+}
 .topNavBar .logo .card{
     color: #9A9DA2;
-  }
-  
+}
 .topNavBar nav {
     font-size: 13px;
     padding-top: 8px;
     padding-bottom: 8px;
-  }
+}
 .topNavBar nav a{
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-weight: bold;
-  }
+}
 .topNavBar nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
-  }
+}
 .topNavBar nav ul>li{
     float: left;
-    margin-left: 17px;
+    margin-left: 17px; 
     margin-right: 17px;
-  }
+}
 .topNavBar nav ul>li>a{
     border-bottom: 3px solid transparent;
-  }
+}
 .topNavBar nav ul>li>a:hover{
     border-bottom-color: #DC6465;
-  }
+}
+.banner{
+    background: url(./img/bg.jpg);
+    height: 515px;
+}
+.banner > .mask{
+    background: rgba(0,0,0,0.8);
+    height: 515px;
+}
+.card {
+  max-width: 940px;
+  margin:  0 auto;
+  border: 1px solid red;
+}
+.card > .pictureAndText{
+  margin: 35px auto;
+}
+.card > .pictureAndText > .picture {
+  width: 299px;
+  height: 347px;
+  margin-left: 30px;
+  position: relative;
+  float: left;
+}
+.card > .pictureAndText > .text{
+  width: 470px;
+  margin-left: 40px;
+  position: relative;
+  float: left;
+}
+.card > .pictureAndText > .text .welcome{
+  display: inline-block;
+  background:rgb(230,104,107);
+  color: #fff;
+  padding: 4px 8px;
+}
+.card > .pictureAndText > .text  .triangle{
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-left: 12px solid rgb(230,104,107);
+  border-bottom: 12px solid transparent;
+  position: relative;
+  top:0px;
+  left:5px;
+}
+.card .information dl{
+  /* clear: left; */
+}
+.card .information dt,
+.card .information dd{
+  float: left;
+  padding: 5px 0;
+}
+.card .information dt{
+  width: 30%;
+}
+.card .information dd{
+  width: 70%;
+}
