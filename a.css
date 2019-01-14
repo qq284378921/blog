@@ -122,4 +122,5 @@ main .card {
 }
 .card .media{
   background-color: rgb(230,104,106);
+  text-align: center;
 }
