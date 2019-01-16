@@ -1,5 +1,5 @@
 body{
-    background: #fff;
+    background: #efefef;
     margin: 0;
     padding: 0;
 }
@@ -9,6 +9,9 @@ body{
 }
 a{
     text-decoration: none;
+}
+li{
+  list-style: none;
 }
 .clearfix::after{
     content: '';
@@ -137,9 +140,108 @@ main .card {
   background: #CF5D5F;
 }
 .button{
+  color: #111111;
   display:inline-block;
   border: 1px solid #bbb;
   padding: 10px;
   margin: 20px auto;
-  text-align: middle;
+  background-color: #fff;
+}
+.button:hover{
+  color: #111111;
+  background-color: #fff;
+  display:inline-block;
+  border: 1px solid #bbb;
+  padding: 10px;
+  margin: 20px auto;
+  box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
+}
+.sectionSkill{
+  width: 800px;
+  margin: auto;
+}
+.section-title{
+  margin-top: 60px;
+  text-align: center;
+  color: #3d4451;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.sectionSkill > ol{
+  background-color: #fff;
+  border: 1px solid rgba(55,55,55,0.25);
+  padding: 15px 40px 20px 30px;
+  box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
+}
+.sectionSkill > ol > li{
+  margin-top: 10px;
+  float: left;
+  width: 50%;
+  padding-left:20px;
+  box-sizing: border-box;
+}
+.porficencyOutside{
+  height: 5px;
+  background-color: #FAE1E1;
+  width: 100%;
+}
+.proficency{
+  height: 3px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 4px;
+}
+.portfolio{
+  /* border: 1px solid #000; */
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align:top;
+}
+.portfolio > ol{
+  margin: 0 auto;
+}
+.portfolio > ol > li{
+  float: left;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.portfolio > ol> li:nth-child(1){
+  margin-left: 0;
+}
+.portfolio > .progressBar{
+  margin-top: 5px;
+  background-color: white;
+  height: 5px;
+
+}
+.portfolio > .progressBar > .progessBarInner{
+  height: 100%;
+  background-color: red;
+  border-radius: 5px;
+  width: 23%;
+  transition: all 0.2s;
+}
+.portfolio > .progressBar > .progessBarInner.state-1{
+  width: 23%;
+  margin-left: 0;
+}
+.portfolio > .progressBar > .progessBarInner.state-2{
+  width: 25%;
+  margin-left: 23%;
+}
+.portfolio > .progressBar > .progessBarInner.state-3{
+  width: 52%;
+  margin-left: 48%;
+}
+.jobs{
+  width: 940px;
+  margin: auto;
+}
+.jobs > .left,
+.jobs > .right{
+  float: left;
+  margin: auto;
 }
