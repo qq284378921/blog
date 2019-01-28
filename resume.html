@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>陈德杰的个人简历</title>
+    <link rel="stylesheet" href="./a.css">
+    <script src="//at.alicdn.com/t/font_1014368_m4ooouhwa4.js"></script>
+    <style type="text/css">
+      .icon {
+          width: 30px; height: 30px;
+          vertical-align: -0.15em;
+          fill: #fff;
+          overflow: hidden;
+          /* margin: 0 16px; */
+          vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="siteWelcome" class="site-welcome active">   
+        <div class="loading"></div>
+    </div>
+    <div id="topNavBar" class="topNavBar">
+      <div class="topNavBar-inner clearfix">
+        <a class="logo" href="#" alt="logo" style="float: left; ">
+          <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav style="float: right;">
+          <ul class="clearfix">
+            <li><a href="#">关于</a></li>
+            <li><a href="#">技能</a></li>
+            <li><a href="#">作品</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">日历</a></li>
+            <li><a href="#">联系方式</a></li>
+            <li><a href="#">其他</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="banner" ><div class="mask"></div></div>
+    <main style="margin-top: -200px;">
+        <div class="card">
+          <div class="pictureAndText clearfix">
+            <div class="picture">
+              <img src="./img/picture.jpg" alt="头像">
+            </div>
+            <div class="text">
+              <div class="profile">
+                <span class="welcome clearfix">Hello</span>
+                <div class="triangle"></div>
+                <h1>陈德杰</h1>
+                <p>前端开发工程师</p>
+                <hr>
+                <dl class="information">
+                  <dt>年龄</dt>
+                  <dd>25</dd>
+                  <dt>所在城市</dt>
+                  <dd>深圳</dd>
+                  <dt>邮箱</dt>
+                  <dd>qq284378921@163.com</dd>
+                  <dt>手机</dt>
+                  <dd>13018750384</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <footer class="media">
+              <a href="#">
+                  <svg  class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-git"></use>
+                  </svg>
+              </a>
+              <a href="#">
+                  <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-blog"></use>
+                  </svg>
+              </a>
+              <a href="#">
+                  <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#icon-weixin---"></use>
+                  </svg>
+              </a>
+          </footer>
+        </div>
+    </main>
+    <p style="text-align: center">
+      <a class="button" href="#">下载 PDF 简历</a>
+    </p>
+    <p style="text-align:center;max-width:940px;margin:auto;font-family: sans-serif;" >陈德杰<br>
+       技能：前端开发
+    </p>
+    <section class="sectionSkill">
+      <h2 class="section-title">技&nbsp&nbsp&nbsp能</h2>
+      <ol class="clearfix">
+        <li >HTML 5 &amp; CSS 3<div class="porficencyOutside"><div class="proficency" style="width:75%"></div></div></li>
+        <li>JavaScript
+          <div class="porficencyOutside" ><div class="proficency" style="width:66%"></div></div></li>
+        <li>jQuery
+          <div class="porficencyOutside"><div class="proficency" style="width:46%"></div></div></li>
+        <li>Vue
+          <div class="porficencyOutside"><div class="proficency" style="width:93%"></div></div></li>
+        <li>React
+          <div class="porficencyOutside"><div class="proficency" style="width:67%"></div></div></li>
+        <li>HTTP
+          <div class="porficencyOutside"><div class="proficency" style="width:81%"></div></div></li>
+      </ol>
+    </section>
+    <section>
+      <h2 class="section-title">作品集</h2>
+      <nav style="text-align:center">
+        <div class="portfolio">
+          <ol class="text1 clearfix">
+            <li id="portfolio1">所有</li>
+            <li id="portfolio2">框架</li>
+            <li id="portfolio3">原生JS&amp;CSS</li>
+          </ol>
+          <div class="progressBar">
+            <div id="portfolioBar" class="progessBarInner">
+            </div>
+          </div>
+        </div>
+      </nav>
+      <script>
+        portfolio1.onclick= function(){
+          portfolioBar.className = 'progessBarInner state-1';
+        }
+        portfolio2.onclick= function(){
+          portfolioBar.className = 'progessBarInner state-2';
+        }
+        portfolio3.onclick= function(){
+          portfolioBar.className = 'progessBarInner state-3';
+        }
+      </script>
+      <div class="jobs">
+        <div class="left">
+          <div class="big">
+            <img src="./img/1.jpg" alt="作品1">
+            </div>
+        </div>
+        <div class="right" style="margin-left:25px;margin-bottom:25px">
+          <div class="small" style="margin-bottom:15px">
+            <img src="./img/2.jpg" alt="作品2">
+          </div>
+          <div class="small">
+            <img src="./img/3.jpg" alt="作品3">
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <script>
+        setTimeout(function(){
+            siteWelcome.classList.remove('active')
+        },1000)
+
+        window.onscroll = function(x){
+            if(window.scrollY > 10){
+                topNavBar.classList.add('sticky')
+            }else{
+                topNavBar.classList.remove('sticky')
+            }
+        }
+    </script>
+  </body>
+</html>
