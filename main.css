@@ -1,25 +1,39 @@
+/* 通配 */
+/* 背景色 #efefef */
+/* rgb(247, 68, 68) */
 body{
-    background: #efefef;
-    margin: 0;
-    padding: 0;
+  background: #efefef;
+  margin: 0;
+  padding: 0;
 }
 *{
   margin: 0;
   padding: 0;
 }
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 li{
   list-style: none;
 }
 
-.clearfix::after{
-    content: '';
-    display: block;
-    clear: both;
+.icon {
+  width: 30px; height: 30px;
+  vertical-align: -0.15em;
+  fill: #fff;
+  overflow: hidden;
+  vertical-align: top;
 }
 
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+section > h2{
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+/* 页面初始化加载 */
 .loading{
   width: 200px;
   height: 200px;
@@ -51,7 +65,6 @@ li{
     width: 30px;height: 30px;opacity:0;
   }
 }
-
 .site-welcome{
   display: none;
   position: fixed;
@@ -68,14 +81,33 @@ li{
   display: flex;
 }
 
+@keyframes menuSlide{
+  0%{
+    width:0;
+  }
+  100%{
+   width:100%;
+  }
+}
+
+/* 顶部栏 */
+.banner{
+  background: url(./img/bg.jpg) no-repeat;
+  background-size: cover;
+  height: 515px;
+}
+.banner > .mask{
+  background: rgba(0,0,0,0.5);
+  height: 515px;
+}
 .topNavBar {
-    position: fixed;
-    top: 0;
-    padding: 20px 0;
-    width: 100%;
-    transition: all 0.5s;
-    z-index: 1;
-    color: rgba(150,150,150,0.9);
+  position: fixed;
+  top: 0;
+  padding: 20px 0;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 1;
+  color: rgba(150,150,150,0.9);
 }
 .topNavBar.sticky{
   background: white;
@@ -84,40 +116,42 @@ li{
   color: #3d4451;
 }
 .topNavBar .logo {
-    font-family: "Hiragino Kaku Gothic Std";
-    font-size: 22px;
-    padding-top: 1px;
+  float: left;
+  font-family: "Hiragino Kaku Gothic Std";
+  font-size: 22px;
+  padding-top: 1px;
 }
-.topNavBar .logo .rs{
-    color: #e6686a;
-    margin-right: 4px;
-    padding-left: 10px
+.topNavBar .logo .rs-style{
+  color: #e6686a;
+  margin-right: 4px;
+  padding-left: 10px
 }
-.topNavBar .logo .card{
-    color: #9A9DA2;
+.topNavBar .logo .card-sytle{
+  color: #9A9DA2;
 }
 .topNavBar nav {
-    font-size: 13px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+  font-size: 13px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
-.topNavBar nav a{
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
+.topNavBar nav span{
+  cursor: pointer;
+  color: inherit;
+  font-weight: bold;
+  position: relative;
+  animation: All 2s;
 }
 .topNavBar nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .topNavBar nav ul>li{
-    float: left;
-    margin-left: 17px; 
-    margin-right: 17px;
+  float: left;
+  margin-left: 17px; 
+  margin-right: 17px;
 }
-.topNavBar nav ul>li>a:hover::after{
+.topNavBar nav ul>li>span:hover::after{
   content: '';
   display: block;
   position: absolute;
@@ -128,23 +162,9 @@ li{
   height: 3px;
   animation: menuSlide 0.3s;
 }
-@keyframes menuSlide{
-  0%{
-    width:0;
-  }
-  100%{
-   width:100%;
-  }
-}
 
-.banner{
-    background: url(./img/bg.jpg);
-    height: 515px;
-}
-.banner > .mask{
-    background: rgba(0,0,0,0.8);
-    height: 515px;
-}
+/* 主体内容 */
+/*personal information  */
 main .card {
   max-width: 940px;
   margin: 0 auto;
@@ -167,15 +187,15 @@ main .card {
   position: relative;
   float: left;
 }
-.card > .pictureAndText > .text .welcome{
+.card > .pictureAndText  .welcome{
   display: inline-block;
   background:rgb(230,104,107);
   color: #fff;
   padding: 4px 8px;
 }
-.card > .pictureAndText > .text  .triangle{
+.card > .pictureAndText .triangle{
   width: 0;
-  height: 0;
+  height: 0;  
   border-top: 0px solid transparent;
   border-left: 12px solid rgb(230,104,107);
   border-bottom: 12px solid transparent;
@@ -183,19 +203,27 @@ main .card {
   top:0px;
   left:5px;
 }
-.card .information dl{
+.card .profile h1{
+  margin-top: 12px;
+}
+.card .profile p{
+  margin-bottom: 15px;
+}
+
+.card .profile dl{
+  margin-top: 15px;
   clear: left;
 }
-.card .information dt,
-.card .information dd{
+.card .profile dt,
+.card .profile dd{
   float: left;
   padding: 5px 0;
 }
-.card .information dt{
+.card .profile dt{
   font-weight: bold;
   width: 30%;
 }
-.card .information dd{
+.card .profile dd{
   color: rgba(0,0,0,0.4);
   width: 70%;
 }
@@ -214,26 +242,49 @@ main .card {
 .card .media a:hover{
   background: #CF5D5F;
 }
+
+/* 按钮 */
 .button{
-  color: #111111;
-  display:inline-block;
+  color: #666;
+  display: inline-block;
   border: 1px solid #bbb;
   padding: 10px;
-  margin: 20px auto;
-  background-color: #fff;
+  margin: 40px auto;
+  background-color: #efefef;
+  border-radius: 15px;
+  font-family: sans-serif;
 }
 .button:hover{
-  color: #111111;
-  background-color: #fff;
-  display:inline-block;
+  color: #666;
+  display: inline-block;
   border: 1px solid #bbb;
   padding: 10px;
-  margin: 20px auto;
+  margin: 40px auto;
+  background-color: #efefef;
+  border-radius: 15px;
+  font-family: sans-serif;
   box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
 }
+
+/* aboutMe */
+#aboutMe{
+  line-height: 25px;
+  text-align: center;
+  max-width: 940px;
+  margin: auto;
+  font-family: sans-serif;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 技能 */
 .sectionSkill{
   width: 800px;
   margin: auto;
+  transform: translateY(70px);
+  transition: all 1s;
+}
+.sectionSkill.recover{
+  transform: translateY(0px);
 }
 .section-title{
   margin-top: 60px;
@@ -268,8 +319,125 @@ main .card {
   border: 1px solid rgb(247, 68, 68);
   border-radius: 4px;
 }
+
+/* 作品 */
+.project{
+  text-align: center;
+  transform: translateY(70px);
+  transition: all 1s;
+}
+.project.recover{
+  transform: translateY(0);
+}
+.project-box{
+  margin-top: 100px;
+}
+.fakeHr{
+  border-top: 1px solid #9A9DA2;
+  width: 700px;
+  margin: 70px auto;
+}
+/* 键盘项目 */
+.project-keyboard{
+  display: flex;
+  justify-content: center;
+}
+
+.project-keyboard > .project-picture{
+  display: flex;
+  justify-content: center;
+}
+.project-keyboard > .project-picture > img{
+  height: 238px;
+  width: 480px;
+}
+.project-keyboard > .project-info{
+  margin-left: 10px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.project-keyboard > .project-info > p{
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #3d4451;
+  line-height: 40px;
+  width: 300px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.project-keyboard > .project-info > a{
+  color: #666;
+  display: inline-block;
+  border: 1px solid #bbb;
+  background-color: #efefef;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.project-keyboard > .project-info > a:hover{
+  color: #666;
+  border: 1px solid #bbb;
+  background-color: #efefef;
+  display:inline-block;
+  padding: 5px 10px;
+  box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
+}
+/* 网易云项目 */
+.project-music{
+  display: flex;
+  justify-content: center;
+}
+.project-music > .project-picture{
+  display: flex;
+}
+.project-music > .project-picture > img{
+  height: 459px;
+  width: 260px;
+  
+}
+.project-music > .project-info{
+  margin: 0 35px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.project-music > .project-info > p{
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #3d4451;
+  line-height: 40px;
+  width: 200px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.project-music > .project-info > a{
+  color: #666;
+  display: inline-block;
+  border: 1px solid #bbb;
+  background-color: #efefef;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.project-music > .project-info > a:hover{
+  color: #666;
+  border: 1px solid #bbb;
+  background-color: #efefef;
+  display:inline-block;
+  padding: 5px 10px;
+  box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
+}
+.project-music > .project-info > .tips{
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+}
+
+
+/* 生活 */
+#live{
+  text-align: center;
+}
+/* 红色滑动条 */
 .portfolio{
-  /* border: 1px solid #000; */
   margin: 0 auto;
   margin-bottom: 20px;
   display: inline-block;
@@ -280,8 +448,13 @@ main .card {
 }
 .portfolio > ol > li{
   float: left;
-  margin-left: 20px;
+  margin-left: 18px;
+  padding: 0 10px;
   cursor: pointer;
+  font-family: sans-serif;
+  color: #555;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #888;
 }
 .portfolio > ol> li:nth-child(1){
   margin-left: 0;
@@ -296,27 +469,141 @@ main .card {
   height: 100%;
   background-color: rgb(247, 68, 68);
   border-radius: 5px;
-  width: 23%;
+  width: 25%;
   transition: all 0.2s;
 }
 .portfolio > .progressBar > .progessBarInner.state-1{
-  width: 23%;
+  width: 25%;
   margin-left: 0;
 }
 .portfolio > .progressBar > .progessBarInner.state-2{
   width: 25%;
-  margin-left: 23%;
+  margin-left: 30%;
 }
 .portfolio > .progressBar > .progessBarInner.state-3{
-  width: 52%;
-  margin-left: 48%;
+  width: 38%;
+  margin-left: 62%;
 }
-.jobs{
-  width: 940px;
-  margin: auto;
+/* 生活图片 */
+.lp-box{
+  margin: 0 auto;
+  width: 834px;
+  overflow: hidden;
+  font-size: 0;
 }
-.jobs > .left,
-.jobs > .right{
+.live-picture-inside.changePicture0{
+  margin: 0 auto;
+  height: 400px;
+  display: flex;
   float: left;
-  margin: auto;
+  transform: translateX(0px);
+  transition: all 0.5s;
+}
+.live-picture-inside.changePicture1{
+  margin: 0 auto;
+  height: 400px;
+  display: flex;
+  float: left;
+  transform: translateX(-834px);
+  transition: all 0.5s;
+}
+.live-picture-inside.changePicture2{
+  margin: 0 auto;
+  height: 400px;
+  display: flex;
+  float: left;
+  transform: translateX(-1668px);
+  transition: all 0.5s;
+}
+.live-picture-inside > .lp-1-left{
+  font-size: 0;
+  width: 534px;
+}
+.live-picture-inside > .lp-1-left > img{
+  width: 534px;
+  height: 400px;
+}
+.live-picture-inside > .lp-1-right{
+  font-size: 0;
+  width: 300px;
+}
+.live-picture-inside > .lp-1-right > img{
+  width: 150px;
+  height: 200px;
+}
+.live-picture-inside > .lp-2-left{
+  font-size: 0;
+  width: 534px;
+}
+.live-picture-inside > .lp-2-left > img{
+  width: 534px;
+  height: 400px;
+}
+.live-picture-inside > .lp-2-right{
+  font-size: 0;
+  width: 300px;
+}
+.live-picture-inside > .lp-2-right > img{
+  width: 150px;
+  height: 200px;
+}
+.live-picture-inside > .lp-3-left{
+  font-size: 0;
+  width: 534px;
+}
+.live-picture-inside > .lp-3-left > img{
+  width: 534px;
+  height: 400px;
+}
+.live-picture-inside > .lp-3-right{
+  font-size: 0;
+  width: 300px;
+}
+.live-picture-inside > .lp-3-right > img{
+  width: 150px;
+  height: 200px;
+}
+
+/* 底部 */
+#bottomBar{
+  position: relative;
+  padding-top: 30px;
+  margin-top: 50px;
+  width: 100%;
+  background-color:rgb(230,104,106);
+  text-align: center;
+  /* border-bottom: 20px solid rgb(238, 43, 43); */
+}
+#bottomBar > .myName{
+  font-family: sans-serif;
+  font-weight: 800;
+  color: rgba(255,255,255,0.9);
+}
+#bottomBar > .personalInfo{
+  justify-content: center;
+  margin-left: 25%;
+  margin-top: 15px;
+  width: 50%;
+}
+#bottomBar > .personalInfo > p:nth-child(odd){
+  display: inline;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+}
+#bottomBar > .personalInfo > p:nth-child(even){
+  display: inline;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+}
+#bottomBar > .otherLink{
+  margin: 20px auto;
+}
+#bottomBar > .statement{
+  background-color: rgba(141, 15, 10, 0.233);
+  font-size: 12px;
+  line-height: 20px;
 }
