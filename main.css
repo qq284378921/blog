@@ -337,6 +337,56 @@ main .card {
   width: 700px;
   margin: 70px auto;
 }
+/* 画板项目 */
+.project-canvas{
+  display: flex;
+  justify-content: center;
+}
+
+.project-canvas > .project-picture{
+  display: flex;
+  justify-content: center;
+}
+.project-canvas > .project-picture > img{
+  height: 238px;
+  width: 480px;
+}
+.project-canvas > .project-info{
+  margin-left: 10px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.project-canvas > .project-info > p{
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #3d4451;
+  line-height: 40px;
+  width: 300px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.project-canvas > .project-info > a{
+  color: #666;
+  display: inline-block;
+  border: 1px solid #bbb;
+  background-color: #efefef;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.project-canvas > .project-info > a:hover{
+  color: #666;
+  border: 1px solid #bbb;
+  background-color: #efefef;
+  display:inline-block;
+  padding: 5px 10px;
+  box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
+}
+.project-canvas > .project-info > .tips{
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+}
 /* 键盘项目 */
 .project-keyboard{
   display: flex;
@@ -515,51 +565,59 @@ main .card {
   transform: translateX(-1668px);
   transition: all 0.5s;
 }
-.live-picture-inside > .lp-1-left{
+.live-picture-inside > .lp-1,
+.live-picture-inside > .lp-2,
+.live-picture-inside > .lp-3{
+  display: flex;
+  float: left;
+  height: 400px;
+  width: 834px;
+}
+.live-picture-inside  .lp-1-left{
   font-size: 0;
   width: 534px;
 }
-.live-picture-inside > .lp-1-left > img{
+.live-picture-inside  .lp-1-left > img{
   width: 534px;
   height: 400px;
 }
-.live-picture-inside > .lp-1-right{
+.live-picture-inside  .lp-1-right{
   font-size: 0;
   width: 300px;
 }
-.live-picture-inside > .lp-1-right > img{
+.live-picture-inside  .lp-1-right > img{
   width: 150px;
   height: 200px;
 }
-.live-picture-inside > .lp-2-left{
+.live-picture-inside  .lp-2-left{
   font-size: 0;
   width: 534px;
 }
-.live-picture-inside > .lp-2-left > img{
+.live-picture-inside  .lp-2-left > img{
   width: 534px;
   height: 400px;
 }
-.live-picture-inside > .lp-2-right{
+.live-picture-inside  .lp-2-right{
   font-size: 0;
   width: 300px;
 }
-.live-picture-inside > .lp-2-right > img{
+.live-picture-inside  .lp-2-right > img{
   width: 150px;
   height: 200px;
 }
-.live-picture-inside > .lp-3-left{
+.live-picture-inside  .lp-3-left{
   font-size: 0;
   width: 534px;
 }
-.live-picture-inside > .lp-3-left > img{
+.live-picture-inside  .lp-3-left > img{
   width: 534px;
   height: 400px;
 }
-.live-picture-inside > .lp-3-right{
+.live-picture-inside  .lp-3-right{
   font-size: 0;
   width: 300px;
 }
-.live-picture-inside > .lp-3-right > img{
+.live-picture-inside  .lp-3-right > img{
   width: 150px;
   height: 200px;
 }
