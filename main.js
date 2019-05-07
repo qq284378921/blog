@@ -1,7 +1,7 @@
 // 页面初始加载动画延时
 setTimeout(function () {
   document.getElementById('siteWelcome').classList.remove('active')
-}, 0000)
+}, 2000)
 // 初始化
 // scrollTopBar()
 progessRedMove()
