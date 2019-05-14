@@ -431,6 +431,7 @@ main .card {
   padding: 5px 10px;
   box-shadow: 0px 2px 5px -1px rgba(55,55,55,0.4);
 }
+/* Vue-resume 样式与键盘共用 */
 /* 网易云项目 */
 .project-music{
   display: flex;
